@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+    <nav>
+        
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="login.html">Login</a>
+        <a href="sign up.html">Sign Up</a>
+</nav>
+</center>
+    <!-- Image Slider -->
+<div class="slider">
+    <div class="slides">
+        <img src="https://picsum.photos/id/1015/1200/400" class="slide active">
+        <img src="https://picsum.photos/id/1016/1200/400" class="slide">
+        <img src="https://picsum.photos/id/1018/1200/400" class="slide">
+    </div>
+</div>
+<script>
+let slides = document.querySelectorAll(".slide");
+let current = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    current++;
+    if (current >= slides.length) {
+        current = 0;
+    }
+    showSlide(current);
+}
+
+setInterval(nextSlide, 3000); // Change image every 3 seconds
+</script>
+    <div class="container">
+
+    </div>
+     <div class="footer-links">
+
+<div class="footer-col">
+      <h4>Stay Connected</h4>
+      <ul class="social-links">
+        <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+      <!-- Optional newsletter form -->
+      <form class="newsletter-form" action="/subscribe" method="post">
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+  </div>
+</footer>
+    <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: info@mywebsite.com</p>
+            <p>Phone: +250 700 000 000</p>
+            <p>Kigali, Rwanda</p>
+        </div>
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+</body>
+</html>
